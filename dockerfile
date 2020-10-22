@@ -11,5 +11,6 @@ RUN apt-get install -y \
       chromium \
       ca-certificates
 
-# Set environment variable Scully needs
+# Set environment variables Scully needs
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+ENV SCULLY_PUPPETEER_EXECUTABLE_PATH '/usr/bin/chromium-browser'
