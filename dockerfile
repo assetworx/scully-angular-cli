@@ -9,8 +9,13 @@ RUN apt-get update -y
 # Install packages related to Scully
 RUN apt-get install -y \
       chromium \
-      ca-certificates
+      nss \
+      freetype \
+      freetype-dev \
+      harfbuzz \
+      ca-certificates \
+      ttf-freefont
 
 # Set environment variables Scully needs
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
-ENV SCULLY_PUPPETEER_EXECUTABLE_PATH '/usr/bin/chromium-browser'
+ENV SCULLY_PUPPETEER_EXECUTABLE_PATH '/usr/bin/chromium'
